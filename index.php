@@ -83,24 +83,74 @@ for($i=0; $i < count($calendario); $i++){
 <!-- Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
-<!-- <?php
+<?php
 
-    $numero = $_GET['numero'];
-    $mail = $_GET['mail'];
 
-    $result = '';
-    if ($numero == 0){
-        $result = 'Zero';
-//        echo('Zero');
-    }elseif($numero == 1){
-        $result = 'Uno';
-  //      echo 'Uno';
-    }else{
-    //    echo 'altro';
-    $result = 'altro';
-    }
-    $result .= ' ' . $name;
-?> -->
+
+$nome = $_GET['nome'];
+// $mail = $_GET['mail'];
+// $age = $_GET['age'];
+
+$controllo = '';
+
+// if (trim(strlen($name)) > 3 && strpos($mail, '@') && strpos($mail, '.') && is_numeric($age)) {
+//     $controllo = 'Accesso riuscito';
+// } else {
+//     $controllo = 'Accesso negato';
+// }
+
+if (strlen($nome > 3))  {
+    $controllo = 'Accesso riuscito';
+} else {
+    $controllo = 'Accesso negato';
+}
+
+?>
+
+<div>
+ <?php echo $controllo ?>
+</div>
+
+<!-- Snack 3
+Creare un array di array. Ogni array figlio avrà come chiave una data in questo formato: DD-MM-YYYY es 01-01-2007 e come valore un array di post associati a quella data. Stampare ogni data con i relativi post.
+Qui l’array di esempio: https://www.codepile.net/pile/R2K5d68z -->
+
+<?php
+
+$posts = [
+        '10/01/2019' => [
+            [
+                'title' => 'Post 1',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 1'
+            ],
+            [
+                'title' => 'Post 2',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 2'
+            ],
+        ],
+        '10/02/2019' => [
+            [
+                'title' => 'Post 3',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 3'
+            ]
+        ],
+        '15/05/2019' => [
+            [
+                'title' => 'Post 4',
+                'author' => 'Michele Papagni',
+                'text' => 'Testo post 4'
+            ],
+        
+        ],
+    ];
+
+echo array_keys($posts);
+
+    ?>
+
 
 </body>
 </html>
