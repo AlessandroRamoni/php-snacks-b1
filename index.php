@@ -21,32 +21,86 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
 Snack 5
 Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
 
-<?php
 
+<div>
+    <ul>
+<?php
 $calendario = [
     [ "partita" => 'Orlando - Chicago | 55-60'],
     [ "partita" => 'Denver - New York | 55-60'],
     [ "partita" => 'Salt Lake City - Los Angeles | 55-60'],
     [ "partita" => 'Miami - Vancouver | 55-60'],
 ];
-
-
 for($i=0; $i < count($calendario); $i++){
     $match = $calendario[$i];
-
-    echo $match["partita"];
+    // echo $match["partita"];
+    echo "<li>". $match["partita"] ."</li>";
 }
 ?>
+</ul>
+</div>
 
-<?= $match["partita"] ?>
+
+
+<div>
+    <ul>
+        <?php
+    $array = [
+        [
+            'homeTeam' => 'ATLANTA HAWKS',
+            'scoreHomeTeam' => '54',
+            'visitingTeam' => 'MIAMI HEAT',
+            'scoreVisitingTeam' => '34'
+        ],
+        [
+            'homeTeam' => 'BOSTON CELTICS',
+            'scoreHomeTeam' => '23',
+            'visitingTeam' => 'BROOKLYN NETS',
+            'scoreVisitingTeam' => '54'
+        ],
+        [
+            'homeTeam' => 'CHARLOTTE HORNETS',
+            'scoreHomeTeam' => '43',
+            'visitingTeam' => 'CLEVELAND CAVALIERS',
+            'scoreVisitingTeam' => '45'
+        ],
+    ];
+    for($i = 0; $i < count($array); $i++){
+        $element = $array[$i];
+
+        // echo $element["homeTeam"];
+        // echo $element["visitingTeam"];
+
+        // echo "<li>". $match["partita"] ."</li>";
+        echo "<li>". $element["homeTeam"] . "&nbsp;" . $element["scoreHomeTeam"] . "<br>". $element["visitingTeam"] . "&nbsp;" . $element["scoreVisitingTeam"] ."</li>";
+    }
+?>
+    </ul>
+</div>
+
+
 
 <!-- Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
-<?php
+<!-- <?php
 
+    $numero = $_GET['numero'];
+    $mail = $_GET['mail'];
 
-?>
+    $result = '';
+    if ($numero == 0){
+        $result = 'Zero';
+//        echo('Zero');
+    }elseif($numero == 1){
+        $result = 'Uno';
+  //      echo 'Uno';
+    }else{
+    //    echo 'altro';
+    $result = 'altro';
+    }
+    $result .= ' ' . $name;
+?> -->
 
 </body>
 </html>
