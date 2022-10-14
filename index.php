@@ -22,6 +22,7 @@ Snack 5
 Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
 
 
+<h1>SNACK-1</h1>
 <div>
     <ul>
 <?php
@@ -83,6 +84,7 @@ for($i=0; $i < count($calendario); $i++){
 <!-- Snack 2
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
+<h1>SNACK-2</h1>
 <?php
 
 
